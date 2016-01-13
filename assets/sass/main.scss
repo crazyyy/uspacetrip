@@ -13,6 +13,7 @@
 @import 'fonts/font_bebas';
 @import 'fonts/font_helveticaneue';
 @import 'fonts/font_proxima-nova';
+@import 'space';
 
 body {
   font-family: $base-font-family;
@@ -91,12 +92,27 @@ picture {
 }
 
 header {
-  height: 800px;
+  /*   background-color: #131930;
+background-image: url(../img/bg/header.jpg);
+background-repeat: no-repeat;
+background-position: center top; */
+  position: relative;
 
-  background-color: #131930;
-  background-image: url(../img/bg/header.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
+  height: 800px;
+  .inner {
+    position: relative;
+    z-index: 4;
+
+    height: 100%;
+  }
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    z-index: 5;
+  }
   .logo {
     display: block;
 
@@ -107,11 +123,19 @@ header {
   }
 }
 nav {
+
   ul {
+    @extend .inner;
     @extend .justify-child;
     @extend .clearfix;
     li {
       display: inline-block;
+    }
+    a {
+      font-size: 18;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: capitalize;
     }
   }
   .headnav {
