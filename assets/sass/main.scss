@@ -91,7 +91,12 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
+  height: 800px;
+
+  background-color: #131930;
+  background-image: url(../img/bg/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
   .logo {
     display: block;
 
