@@ -130,11 +130,19 @@ header {
     height: 100%;
   }
   .owl-carousel {
-    padding-top: 207px;
+    /* padding-top: 207px; */
+    padding-top: 110px;
 
     text-align: center;
 
     color: #fff;
+    background-image: url(../img/bg/platform.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    .item {
+      height: 756px;
+      position: relative;
+    }
     h6 {
       font-family: 'Bebas';
       font-size: 120px;
@@ -161,6 +169,13 @@ header {
       padding: 0 320px;
 
       text-align: center;;
+    }
+    .container-img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
     }
   }
   .btn-head-recall {
