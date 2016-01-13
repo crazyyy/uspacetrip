@@ -82,8 +82,11 @@
 
 .stars {
   z-index: 0;
+background-color: #0b0f1f;
+background-image: url(../img/stars.png);
+background-repeat: repeat;
+background-position: top center;
 
-  background: #0b0f1f url(../img/stars.png) repeat top center;
 }
 
 .twinkling {
@@ -91,11 +94,24 @@
 
   animation: move-twink-back 200s linear infinite;
 
-  background: transparent url(../img/twinkling.png) repeat top center;
+
+
+background-color: transparent;
+background-image: url(../img/twinkling.png);
+background-repeat: repeat;
+background-position: top center;
+
 }
 .earth {
   z-index: 2;
-  background: transparent url(../img/earth.png) no-repeat bottom center;
+
+
+background-attachment: fixed;
+
+  background-color: transparent;
+background-image: url(../img/earth.png);
+background-repeat: repeat;
+background-position: top center;
 }
 
 .clouds {
@@ -103,5 +119,13 @@
 
   animation: move-clouds-back 200s linear infinite;
 
-  background: transparent url(../img/clouds.png) repeat top center;
+
+
+
+
+  background-color: transparent;
+background-image: url(../img/clouds.png);
+background-repeat: repeat;
+background-position: top center;
+
 }

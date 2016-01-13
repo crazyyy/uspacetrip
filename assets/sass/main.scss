@@ -90,20 +90,88 @@ picture {
 
   @extend .clearfix;
 }
+.btn {
+  font-size: 24px;
 
+  padding: 15px 0;
+
+  text-align: center;
+  text-decoration: none;
+
+  border: 1px solid transparent;
+  border-radius: $base-border-radius;
+  background-color: transparent;
+  &.btn-blue {
+    color: $blue;
+    border-color: $blue;
+  }
+  &.btn-white {
+    color: white;
+    border-color: white;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
 header {
-  /*   background-color: #131930;
-background-image: url(../img/bg/header.jpg);
-background-repeat: no-repeat;
-background-position: center top; */
   position: relative;
 
   height: 800px;
+  /* this is backup if space animate not loaded */
+
+  background-color: #131930;
+  background-image: url(../img/bg/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
   .inner {
     position: relative;
     z-index: 4;
 
     height: 100%;
+  }
+  .owl-carousel {
+    padding-top: 207px;
+
+    text-align: center;
+
+    color: #fff;
+    h6 {
+      font-family: 'Bebas';
+      font-size: 120px;
+      font-weight: bold;
+      line-height: .8;
+
+      margin: 0 0 29px;
+
+      text-transform: uppercase;
+
+      color: #fff;
+      span {
+        color: $blue;
+      }
+    }
+    p {
+      font-family: $hcl;
+      font-size: 24px;
+      line-height: 40px;
+
+      display: block;
+
+      margin: 0;
+      padding: 0 320px;
+
+      text-align: center;;
+    }
+  }
+  .btn-head-recall {
+    font-family: $hcb;
+    font-size: 24px;
+
+    display: block;
+
+    width: 320px;
+    margin: 0 auto;
+    padding: 18px 0;
   }
 }
 .header-menu {
@@ -116,18 +184,49 @@ background-position: center top; */
   height: 100px;
   .logo,
   .social,
-  .btn-blue {
+  .btn-head-order {
     position: absolute;
-    top: 0;
-    left: 0;
   }
   .logo {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+
     display: block;
 
-    width: $width / 10;
+    width: 120px;
     img {
       max-width: 100%;
     }
+  }
+  .social {
+    position: absolute;
+    top: 47px;
+    left: 240px;
+    li {
+      display: inline-block;
+
+      margin: 0 7px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .fa {
+      font-size: 26px;
+
+      color: #3c3e4c;
+    }
+  }
+  .btn-head-order {
+    font-size: 18px;
+
+    top: 40px;
+    right: 80px;
+
+    width: 200px;
   }
 }
 nav {
@@ -140,7 +239,7 @@ nav {
     li {
       display: inline-block;
 
-      margin: 0 12px;
+      margin: 0 19px;
       &:first-child {
         margin-left: 0;
       }
