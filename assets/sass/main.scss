@@ -13,7 +13,7 @@
 @import 'fonts/font_bebas';
 @import 'fonts/font_helveticaneue';
 @import 'fonts/font_proxima-nova';
-@import 'space';
+/* @import 'space'; */
 
 body {
   font-family: $base-font-family;
@@ -295,3 +295,61 @@ footer {
 }
 
 @import 'import/print';
+
+
+
+
+
+
+
+
+
+
+
+.tab-menu {
+  position: relative;
+
+  margin-bottom: 30px;
+
+  border: solid 1px #d3d3d3;
+  .tab-link {
+    font-size: 17px;
+    font-weight: 700;
+
+    height: 50px;
+    padding-top: 14px;
+
+    cursor: pointer;
+    transition: all .1s .1s ease;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #5c5c5c;
+    border-bottom: solid 1px #d3d3d3;
+  }
+  &.five-links .tab-link {
+    width: 183px;
+    &.five {
+      width: 186px;
+    }
+  }
+  .tab-link {
+    + .tab-link {
+      border-left: solid 1px #d3d3d3;
+    }
+    &:hover {
+      color: #548ab7;
+      background-color: #fafafa;
+    }
+    &.active {
+      color: #00478d;
+      border-bottom: none;
+      &:hover {
+        cursor: default;
+
+        background-color: #fff;
+      }
+    }
+  }
+}
