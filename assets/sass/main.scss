@@ -125,6 +125,13 @@ picture {
 
   color: #fff;
 }
+.background-blue {
+  background-color: $blue;
+  background-image: url(../img/bg/about.png);
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+}
 header {
   position: relative;
 
@@ -300,17 +307,16 @@ article {
 .looper {
   @extend .clearfix;
 }
+
+
+
 .about {
   height: auto;
   padding-top: 160px;
 
   text-align: center;
 
-  background-color: $blue;
-  background-image: url(../img/bg/about.png);
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
+  @extend .background-blue;
   h5 {
     font-size: 35px;
     line-height: 2.2;
@@ -369,7 +375,8 @@ article {
   .tabs-header {
     margin-bottom: 80px;
 
-    border-bottom: 1px solid #173b59;
+    border-bottom: 1px solid $border-blue;
+    .col-md-2,
     .col-md-3 {
       &:first-child {
         padding-left: 0;
@@ -406,6 +413,102 @@ article {
       }
     }
   }
+  .tabContent {
+    font-size: 18px;
+
+    padding: 0;
+
+    color: $blue;
+    border: 1px solid $border-blue;
+
+    @extend .clearfix;
+    h5 {
+      font-family: $hcb;
+      font-size: 30px;
+
+      margin-bottom: 50px;
+      padding-top: 80px;
+    }
+    img {
+      float: left;
+
+      width: 480px;
+      height: 520px;
+      margin: 0 80px 0 0;
+    }
+    p {
+      line-height: 2;
+
+      margin-bottom: 85px;
+      padding-right: 100px;
+    }
+    .btn-blue {
+      width: 280px;
+      height: 60px;
+    }
+  }
+  .tabs-container {
+    margin-bottom: 160px;
+  }
+}
+.how-we-do-it {
+  padding-top: 120px;
+
+  color: #fff;
+
+  @extend .background-blue;
+  h4 {
+    @extend .block-title;
+  }
+  ul {
+    margin: 0 auto 80px;
+    padding: 0 30px;
+    li {
+      margin: 0 0 40px;
+      padding: 0 0 0 200px;
+
+      @extend .clearfix;
+      &:before {
+        display: none;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 160px;
+      height: 160px;
+      margin-top: -80px;
+    }
+    h5 {
+      font-family: $hcr;
+      font-size: 20px;
+
+      margin: 0 0 30px;
+    }
+    p {
+      line-height: 1.5;
+    }
+  }
+  h6 {
+    font-family: $hcr;
+    font-size: 30px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+  }
+  .btn-place-order {
+    display: block;
+
+    width: 280px;
+    height: 60px;
+    margin: 0 auto 120px;
+  }
 }
 
 footer {
@@ -419,61 +522,3 @@ footer {
 }
 
 @import 'import/print';
-
-
-
-
-
-
-
-
-
-
-
-.tab-menu {
-  position: relative;
-
-  margin-bottom: 30px;
-
-  border: solid 1px #d3d3d3;
-  .tab-link {
-    font-size: 17px;
-    font-weight: 700;
-
-    height: 50px;
-    padding-top: 14px;
-
-    cursor: pointer;
-    transition: all .1s .1s ease;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: #5c5c5c;
-    border-bottom: solid 1px #d3d3d3;
-  }
-  &.five-links .tab-link {
-    width: 183px;
-    &.five {
-      width: 186px;
-    }
-  }
-  .tab-link {
-    + .tab-link {
-      border-left: solid 1px #d3d3d3;
-    }
-    &:hover {
-      color: #548ab7;
-      background-color: #fafafa;
-    }
-    &.active {
-      color: #00478d;
-      border-bottom: none;
-      &:hover {
-        cursor: default;
-
-        background-color: #fff;
-      }
-    }
-  }
-}

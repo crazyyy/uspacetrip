@@ -3,7 +3,7 @@ $hcl: 'Helvetica Neue Cyr Light';
 $hcb: 'Helvetica Neue Cyr Bold';
 
 // Font Sizes
-$base-font-size: 16px;
+$base-font-size: 20px;
 $em-base: $base-font-size;
 $base-font-family: $hcl;
 $heading-font-family: $base-font-family;
@@ -34,12 +34,13 @@ $orange: orange;
 $red: red;
 $blue: #29c1ff;
 $dark-blue: #131930;
+$border-blue: #173b59;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: #fff;
 $action-color: $blue;
 
 // Border
