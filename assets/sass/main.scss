@@ -510,6 +510,17 @@ article {
     margin: 0 auto 120px;
   }
 }
+.what-are-people-saying {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: $dark-blue;
+  h4 {
+    @extend .block-title;
+  }
+}
+
+
 
 footer {
   height: $footer;
