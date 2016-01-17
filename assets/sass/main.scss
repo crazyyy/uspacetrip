@@ -518,15 +518,134 @@ article {
   h4 {
     @extend .block-title;
   }
+  .what-are-people-block {
+    font-size: 16px;
+
+    position: relative;
+
+    padding: 0 25px 25px;
+    &:before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+
+      content: '\f10e';
+
+      color: $blue;
+
+      @extend .dblock;
+      @extend .fa;
+    }
+    p {
+      line-height: 1.5;
+
+      padding-bottom: 35px;
+
+      color: #fff;
+    }
+    .author {
+      font-family: $hcb;
+
+      display: block;
+
+      color: $blue;
+    }
+  }
 }
+.technical-specifications {
+  height: 1119px;
 
+  text-align: center;
 
+  background-color: #0c1228;
+  background-image: url(../img/bg/technical-specifications.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  h4 {
+    margin-bottom: 760px;
+
+    @extend .block-title;
+  }
+  .technical-specifications-content {
+    line-height: 1.8;
+
+    padding: 0 20px;
+
+    color: #fff;
+  }
+}
+.find-uspacetrip {
+  background-color: #131930;
+  h3 {
+    font-family: 'Bebas';
+    font-size: 60px;
+    font-weight: $f-light;
+    line-height: 1.2;
+
+    padding: 70px 35px;
+
+    color: #fff;
+    border-top: 1px solid #173b59;
+    border-bottom: 1px solid #173b59;
+    a {
+      font-weight: bold;
+    }
+  }
+}
+.contact-us {
+  height: 960px;
+  padding-top: 190px;
+
+  background-image: url(../img/bg/contact-us.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  h4 {
+    margin-bottom: 60px;
+
+    @extend .block-title;
+  }
+  form {
+    width: 560px;
+    margin: 0 auto;
+
+    text-align: center;
+    input {
+      margin-bottom: 30px;
+      padding: 18px;
+
+      text-align: center;
+
+      color: $blue;
+      border: 0;
+      border-bottom: 1px solid $blue;
+      outline: none;
+      background-color: transparent;
+      box-shadow: none;
+      &:focus {
+        box-shadow: none;
+      }
+      &[type=submit] {
+        width: 240px;
+        height: 60px;
+        margin: 0 auto;
+
+        border: 1px solid $blue;
+      }
+    }
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder,
+    input:-moz-placeholder,
+    input:-ms-input-placeholder {
+      color: $blue;
+    }
+  }
+}
 
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
 
-  background-color: $light-gray;
+  background-color: $blue;
   .inner {
     height: $footer;
   }
