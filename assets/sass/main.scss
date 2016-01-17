@@ -649,6 +649,83 @@ footer {
   .inner {
     height: $footer;
   }
+  .copyright {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 390px;
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+
+      margin: 0;
+    }
+    ul {
+      display: block;
+
+      width: 100%;
+      margin: 0 0 20px;
+
+      border: 2px solid #fff;
+      li {
+        display: inline-block;
+
+        padding: 10px;
+
+        text-align: center;
+        &:first-child {
+          text-transform: uppercase;
+        }
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .paymathods {
+    font-size: 14px;
+
+    width: 220px;
+    margin: 0 auto;
+    padding: 100px 0 0;
+
+    text-align: center;
+
+    background-image: url(../img/bg/paymathods.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .maillist {
+    font-size: 14px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 280px;
+
+    text-align: center;
+
+    color: #fff;
+    .order-free {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.5;
+
+      display: block;
+
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+
+      color: #fff;
+      border: 2px solid #fff;
+      span {
+        border-bottom: 1px dotted #fff;
+      }
+    }
+  }
 }
 
 @import 'import/print';
