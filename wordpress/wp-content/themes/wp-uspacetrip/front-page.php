@@ -1,76 +1,4 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title> </title>
-
-    <!-- icons -->
-    <link href="favicon.ico" rel="shortcut icon">
-
-    <!-- css + javascript -->
-    <link rel="stylesheet" href="style.css" media="all">
-
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="js/html5shiv.js"></script>
-      <script type="text/javascript" src="js/selectivizr.js"></script>
-      <script type="text/javascript" src="js/respond.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="///cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-</head>
-<body dasa>
-<!-- wrapper -->
-<div class="wrapper">
-  <header id="header" role="banner" onload="setWindowSize()">
-
-    <div class="header-menu">
-
-      <div class="logo">
-        <img src="img/logo.png" alt="" title="">
-      </div><!-- /logo -->
-
-      <div class="social">
-        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-      </div>
-
-      <nav class="nav" role="navigation">
-        <ul class="headnav">
-        <li><a href="#">About</a></li>
-        <li><a href="#">How it Looks</a></li>
-        <li><a href="#">How to Use It</a></li>
-        <li><a href="#">How We Do It</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Tech</a></li>
-        <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav><!-- /nav -->
-
-      <a href="#" class="btn btn-blue btn-head-order">Place your order</a>
-    </div><!-- /.header-menu -->
-
-    <div class="stars"></div>
-    <div class="earth"></div>
-    <div class="twinkling"></div>
-
-    <div class="inner">
-      <div class="owl-carousel">
-        <div class="item">
-          <h6>We know how to <span>get high</span></h6>
-          <p>We launch dreams into stratosphere and create beautiful videos to memorise this moment</p>
-          <span class="container-img">
-            <img src="img/slider-3.png" alt="">
-          </span>
-        </div>
-      </div><!-- owl-carousel -->
-      <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
-    </div><!-- /.inner -->
-  </header><!-- /header -->
-
-  <section role="main">
+<?php /* Template Name: Front Page */ get_header(); ?>
 
     <article id="about" class="about">
       <div class="container">
@@ -130,7 +58,6 @@
       </div><!-- /.container -->
     </article><!-- /#how-to-use-it.how-to-use-it -->
 
-
     <article class="how-we-do-it" id="how-we-do-it">
       <div class="container">
         <div class="row">
@@ -162,7 +89,6 @@
         </div><!-- row -->
       </div><!-- /.container -->
     </article><!-- /#how-we-do-it.how-we-do-it -->
-
 
     <article class="what-are-people-saying" id="what-are-people-saying">
       <div class="container">

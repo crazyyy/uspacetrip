@@ -113,58 +113,10 @@ function wpeHeadNav()
     )
   );
 }
-// WPE footer navigation
-function wpeFootNav() {
-  wp_nav_menu(
-  array(
-    'theme_location'  => 'footer-menu',
-    'menu'            => '',
-    'container'       => 'div',
-    'container_class' => 'menu-{menu slug}-container',
-    'container_id'    => '',
-    'menu_class'      => 'menu',
-    'menu_id'         => '',
-    'echo'            => true,
-    'fallback_cb'     => 'wp_page_menu',
-    'before'          => '',
-    'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
-    'items_wrap'      => '<ul class="footernav">%3$s</ul>',
-    'depth'           => 0,
-    'walker'          => ''
-    )
-  );
-}
-// WPE sidebar navigation
-function wpeSideNav() {
-  wp_nav_menu(
-  array(
-    'theme_location'  => 'sidebar-menu',
-    'menu'            => '',
-    'container'       => 'div',
-    'container_class' => 'menu-{menu slug}-container',
-    'container_id'    => '',
-    'menu_class'      => 'menu',
-    'menu_id'         => '',
-    'echo'            => true,
-    'fallback_cb'     => 'wp_page_menu',
-    'before'          => '',
-    'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
-    'depth'           => 0,
-    'walker'          => ''
-    )
-  );
-}
 //  Register WPE Navigation
 function register_html5_menu() {
   register_nav_menus(array(
-    'header-menu' => __('Меню в шапке', 'wpeasy'),
-    'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
-    'footer-menu' => __('Меню в подвал', 'wpeasy')
+    'header-menu' => __('header nav', 'wpeasy')
   ));
 }
 //  If Dynamic Sidebar Existsов
@@ -179,18 +131,6 @@ if (function_exists('register_sidebar')) {
     'before_title' => '<h6>',
     'after_title' => '</h6>'
   ));
-  //  Define Sidebar Widget Area 2. If your want to display more widget - uncoment this
-  /*
-  register_sidebar(array(
-    'name' => __('Блок виджетов #2', 'wpeasy'),
-    'description' => __('Description for this widget-area...', 'wpeasy'),
-    'id' => 'widgetarea2',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
-  ));
-  */
 }
 
 //  Custom Excerpts
@@ -403,7 +343,6 @@ function filter_media_comment_status( $open, $post_id ) {
   }
   return $open;
 }
-
 
  // Редирект записи, когда поисковый запрос выдает один результат
  // http://wordpresso.org/hacks/29-wordpress-tryukov-dlya-rabotyi-s-zapisyami-i-stranitsami/

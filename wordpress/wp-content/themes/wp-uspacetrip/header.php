@@ -1,31 +1,32 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
+  <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
-    <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
-    <!-- meta -->
+  <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
+  <!-- meta -->
 
-    <!-- icons -->
-    <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
+  <!-- icons -->
+  <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
-      <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/selectivizr.js"></script>
-      <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
-    <![endif]-->
-    <!-- css + javascript -->
-    <?php wp_head(); ?>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/selectivizr.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
+  <![endif]-->
+  <!-- css + javascript -->
+  <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
 <div class="wrapper">
-  <header role="banner">
-    <div class="inner">
+  <header id="header" role="banner" onload="setWindowSize()">
+
+    <div class="header-menu">
 
       <div class="logo">
         <?php if ( is_front_page() && is_home() ){ } else { ?>
@@ -38,12 +39,35 @@
         <?php } ?>
       </div><!-- /logo -->
 
+      <div class="social">
+        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </div>
+
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
       </nav><!-- /nav -->
 
+      <a href="#" class="btn btn-blue btn-head-order">Place your order</a>
+    </div><!-- /.header-menu -->
+
+    <div class="stars"></div>
+    <div class="earth"></div>
+    <div class="twinkling"></div>
+
+    <div class="inner">
+      <div class="owl-carousel">
+        <div class="item">
+          <h6>We know how to <span>get high</span></h6>
+          <p>We launch dreams into stratosphere and create beautiful videos to memorise this moment</p>
+          <span class="container-img">
+            <img src="img/slider-3.png" alt="">
+          </span>
+        </div>
+      </div><!-- owl-carousel -->
+      <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
     </div><!-- /.inner -->
   </header><!-- /header -->
 
   <section role="main">
-    <div class="inner">
