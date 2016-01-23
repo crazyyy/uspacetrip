@@ -66,7 +66,6 @@
             $content = get_sub_field('slide_content');
             $image = get_sub_field('slide_image');
           ?>
-
             <div class="item">
               <h6><?php echo $title; ?></h6>
               <p><?php echo $content; ?></p>
@@ -74,7 +73,6 @@
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
               </span>
             </div>
-
           <?php endwhile; ?>
         <?php endif; ?>
 

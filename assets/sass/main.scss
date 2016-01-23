@@ -16,7 +16,7 @@
 @import 'owl/owl.carousel';
 @import 'owl/owl.theme';
 @import 'owl/owl.transitions';
-@import 'space';
+/* @import 'space'; */
 
 body {
   font-family: $base-font-family;
@@ -215,6 +215,39 @@ header {
     width: 320px;
     margin: 0 auto;
     padding: 18px 0;
+  }
+}
+.owl-theme {
+  .owl-controls {
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 30px;
+    margin-top: -15px;
+    .owl-buttons {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+
+      @extend .clearfix;
+      div {
+        font-size: 30px;
+        line-height: .9;
+
+        margin: 0;
+        padding: 0;
+
+        background: transparent;
+        &.owl-prev {
+          float: left;
+        }
+        &.owl-next {
+          float: right;
+        }
+      }
+    }
   }
 }
 .header-menu {

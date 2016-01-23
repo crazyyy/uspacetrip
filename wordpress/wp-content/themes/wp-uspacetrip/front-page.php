@@ -4,10 +4,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h5>uspacetrip</h5>
-            <p>If you are dreaming to make a trip above the stars - we can make your goal a little closer!  Uspacetrip launch<br>your toy copy to the stratosphere! In the issue you’ll have a short video-story of your incrediable<br>flight accompanied with your favorite song.</p>
-            <p>If you are looking for an impressive gift for yourself or your friends - Uspacetrip is just what you need!</p>
-            <p>We know how to get high!</p>
+            <h5><?php the_field('about_title'); ?></h5>
+            <?php the_field('about_content'); ?>
           </div>
         </div><!-- row -->
         <div class="row">
@@ -25,34 +23,46 @@
           <h4 class="col-md-12">How to use it</h4>
 
           <div class="row tabs-header" id="tabs">
-            <div class="col-md-2">
-              <a href="#birthday" class="tab-link active"><span>Birthday</span></a>
-            </div>
-            <div class="col-md-2">
-              <a href="#wedding" class="tab-link"><span>Wedding</span></a>
-            </div>
-            <div class="col-md-3">
-              <a href="#viral-branding" class="tab-link"><span>Viral branding</span></a>
-            </div>
-            <div class="col-md-2">
-              <a href="#others" class="tab-link"><span>Others</span></a>
-            </div>
+            <?php if( have_rows('tabs') ): ?>
+
+              <?php while( have_rows('tabs') ): the_row();
+
+                // vars
+                $title = get_sub_field('tab_header_title');
+                $id = get_sub_field('tab_id');
+                $size = get_sub_field('tab_sized');
+              ?>
+
+                <div class="col-md-<?php echo $size; ?>">
+                  <a href="#<?php echo $id; ?>" class="tab-link "><span><?php echo $title; ?></span></a>
+                </div>
+
+              <?php endwhile; ?>
+            <?php endif; ?>
           </div><!-- row tabs-header -->
 
           <div class="row tabs-container">
-            <div class="tabContent col-md-12" id="birthday">
-              <img src="img/content-birthday.jpg" alt="">
-              <h5>Birthday</h5>
-              <p>It’s so hard to surprise someone nowadays. If you want to present memorable gift and new emotions in unussual way - Uspacetrip can help you for sure. We can add something really new and extraordinary to make your gift standing out from all.</p>
-              <a href="#" class="btn btn-blue">Place your order</a>
-            </div><!-- tabContent col-md-12 birthday -->
-            <div class="tabContent col-md-12" id="wedding">
-            </div><!-- wedding -->
-            <div class="tabContent col-md-12" id="viral-branding">
-            </div><!-- viral-branding -->
-            <div class="tabContent col-md-12" id="others">
-            </div><!-- others -->
-          </div>
+
+            <?php if( have_rows('tabs') ): ?>
+              <?php while( have_rows('tabs') ): the_row();
+                // vars
+                $subtitle = get_sub_field('tab_subtitle');
+                $id = get_sub_field('tab_id');
+                $size = get_sub_field('tab_sized');
+                $image = get_sub_field('tab_image');
+                $content = get_sub_field('tab_content');
+              ?>
+
+              <div class="tabContent col-md-12" id="<?php echo $id; ?>">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                <h5><?php echo $subtitle; ?></h5>
+                <p><?php echo $content; ?></p>
+                <a href="#" class="btn btn-blue">Place your order</a>
+              </div><!-- tabContent col-md-12 <?php echo $id; ?> -->
+              <?php endwhile; ?>
+            <?php endif; ?>
+
+          </div><!-- tabs-container -->
 
         </div><!-- /.row -->
       </div><!-- /.container -->
