@@ -73,26 +73,24 @@
         <div class="row">
           <h4 class="col-md-12">how we do it</h4>
           <ul class="col-md-12">
-            <li>
-              <img src="img/how-we-do-it-1.png" alt="">
-              <h5>We take your photo</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-              <img src="img/how-we-do-it-2.png" alt="">
-              <h5>We make 3D model</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-              <img src="img/how-we-do-it-3.png" alt="">
-              <h5>We send it into stratosphere</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-              <img src="img/how-we-do-it-4.png" alt="">
-              <h5>We create a video and send it to you</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
+
+            <?php if( have_rows('how_we_do_it') ): ?>
+              <?php while( have_rows('how_we_do_it') ): the_row();
+                // vars
+                $title = get_sub_field('title');
+                $content = get_sub_field('content');
+                $image = get_sub_field('ico');
+              ?>
+
+              <li>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                <h5><?php echo $title; ?></h5>
+                <?php echo $content; ?>
+              </li>
+
+              <?php endwhile; ?>
+            <?php endif; ?>
+
           </ul>
           <h6>Do you have any questions?</h6>
           <a href="" class="btn btn-white btn-place-order">Place your order</a>
