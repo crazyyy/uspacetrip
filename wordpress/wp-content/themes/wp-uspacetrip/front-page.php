@@ -179,13 +179,11 @@
       <a class="btn order-free">
         Order Free Stratosphere<br>Launch Guide <span>By Mail</span>
       </a><!-- /.order-free -->
-      <p>© 2015 uspacetrip. All Rights Reserved.</p>
+      <p>&copy; <?php echo date("Y"); ?> uspacetrip. All Rights Reserved.</p>
     </div><!-- /.maillist -->
 
   </div><!-- /.inner -->
 </footer><!-- /footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-  <script type="text/javascript" src="js/scripts.js"></script>
+  <?php wp_footer(); ?>
 </body>
 </html>

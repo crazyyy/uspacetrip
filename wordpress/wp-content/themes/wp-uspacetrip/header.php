@@ -40,9 +40,9 @@
       </div><!-- /logo -->
 
       <div class="social">
-        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="<?php the_field('facebook'); ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+        <li><a href="<?php the_field('youtube'); ?>" rel="nofollow" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+        <li><a href="<?php the_field('instagram'); ?>" rel="nofollow" target="_blank"><i class="fa fa-instagram"></i></a></li>
       </div>
 
       <nav class="nav" role="navigation">
@@ -58,13 +58,26 @@
 
     <div class="inner">
       <div class="owl-carousel">
-        <div class="item">
-          <h6>We know how to <span>get high</span></h6>
-          <p>We launch dreams into stratosphere and create beautiful videos to memorise this moment</p>
-          <span class="container-img">
-            <img src="img/slider-3.png" alt="">
-          </span>
-        </div>
+
+        <?php if( have_rows('slider') ): ?>
+          <?php while( have_rows('slider') ): the_row();
+            // vars
+            $title = get_sub_field('slide_title');
+            $content = get_sub_field('slide_content');
+            $image = get_sub_field('slide_image');
+          ?>
+
+            <div class="item">
+              <h6><?php echo $title; ?></h6>
+              <p><?php echo $content; ?></p>
+              <span class="container-img">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+              </span>
+            </div>
+
+          <?php endwhile; ?>
+        <?php endif; ?>
+
       </div><!-- owl-carousel -->
       <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
     </div><!-- /.inner -->
