@@ -102,30 +102,20 @@
       <div class="container">
         <div class="row">
           <h4 class="col-md-12">What are people saying about us</h4>
+
+            <?php if( have_rows('reviews') ): ?>
+              <?php while( have_rows('reviews') ): the_row();
+                // vars
+                $name = get_sub_field('author');
+                $content = get_sub_field('review');
+              ?>
           <div class="col-md-4 what-are-people-block">
-            <p>You should have seen eyes of our boss when video started to play! At that moment our team realized that was exactly the present he want. Thanks Uspasetrip for possibility to amaze with a gift even a person who is so hard to please.</p>
-            <span class="author">Nikol</span>
+            <?php echo $content; ?>
+            <span class="author"><?php echo $name; ?></span>
           </div><!-- what-are-people-block -->
-          <div class="col-md-4 what-are-people-block">
-            <p>Thanks for a good work, guys! Cool video, excelent shooting, nice team and great idea of such service for sure.</p>
-            <span class="author">Brian R.</span>
-          </div><!-- what-are-people-block -->
-          <div class="col-md-4 what-are-people-block">
-            <p>I am a member of a small team of IT professionals. Recently we launched an e-commerce start-up and we believe our product is a game changer! The statuette of our CEO proudly holding our logo while flying in the stratosphere was a bright beginning of our project! Thank you, Uspasetrip!</p>
-            <span class="author">Alberto, Madrid.</span>
-          </div><!-- what-are-people-block -->
-          <div class="col-md-4 what-are-people-block">
-            <p>This team has made a video for our company and coped with this task perfectly! Тhere were small offsets on terms, but such result worth the wait. Good quality and sociable team is a recipe for success.</p>
-            <span class="author">Vladislav</span>
-          </div><!-- what-are-people-block -->
-          <div class="col-md-4 what-are-people-block">
-            <p>It was my parents 30th wedding anniversary, I looked for a present for a couple of weeks but everything seemed so trivial, then I came across Uspacetrip! The video was absolutely mind blowing, I couldn't hope to find a better present! Thank you guys! Keep up the great work!</p>
-            <span class="author">John, London</span>
-          </div><!-- what-are-people-block -->
-          <div class="col-md-4 what-are-people-block">
-            <p>We decided to present such impression to our friends for their merriage. We translate video on a big screen when all guests were present. The reaction was amazing! Everyone liked, but the main thing that the newlyweds were happy too. Uspacetrip, don’t stop helping impress :)</p>
-            <span class="author">Kira & Steve</span>
-          </div><!-- what-are-people-block -->
+                        <?php endwhile; ?>
+            <?php endif; ?>
+
         </div><!-- /.row -->
       </div><!-- /.container -->
     </article><!-- /#what-are-people-saying.what-are-people-saying -->
