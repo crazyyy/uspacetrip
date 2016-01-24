@@ -822,6 +822,8 @@ article {
 
   display: none;
 
+  cursor: pointer;
+
   background-color: #080810;
   background-color: rgba(8, 8, 16, .5);
 }
@@ -848,6 +850,8 @@ article {
     position: absolute;
     top: 40px;
     right: 40px;
+
+    cursor: pointer;
 
     color: $blue;
   }

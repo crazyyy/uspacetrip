@@ -1703,4 +1703,15 @@ $(document).ready(function(){
     $('.modal-container').fadeIn( "slow" );
   });
 
+  $('.modal-bg').click(function(){
+    $('.modal-bg').fadeOut( "fast" );
+    $('.modal-container').fadeOut( "slow" );
+  });
+
+  $('.modal-container .fa-times').click(function(){
+    $('.modal-bg').fadeOut( "fast" );
+    $('.modal-container').fadeOut( "slow" );
+  });
+
 });
+
