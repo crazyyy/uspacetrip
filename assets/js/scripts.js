@@ -1693,3 +1693,14 @@ $(document).ready(function(){
   });
 
 });
+
+// modal window
+$(document).ready(function(){
+  //Click event to scroll to top
+  $('.btn-place-order').click(function(){
+    event.preventDefault();
+    $('.modal-bg').fadeIn( "fast" );
+    $('.modal-container').fadeIn( "slow" );
+  });
+
+});

@@ -180,6 +180,16 @@
 
   </div><!-- /.inner -->
 </footer><!-- /footer -->
+
+  <div class="modal-bg"></div><!-- /.modal-bg -->
+  <div class="modal-container">
+    <h6><span>Order free</span> stratosphere guide by mail</h6>
+    <h5>Get Your FREE Copy Now</h5>
+    <?php echo do_shortcode( '[contact-form-7 id="64" title="modal-form"]' ); ?>
+    <p><i class="fa fa-lock"></i>Your information will never be shared with any other third party</p>
+    <i class="fa fa-times"></i>
+  </div><!-- /.modal-container -->
+
   <?php wp_footer(); ?>
 </body>
 </html>
