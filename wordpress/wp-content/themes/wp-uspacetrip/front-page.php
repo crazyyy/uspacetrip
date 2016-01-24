@@ -109,11 +109,11 @@
                 $name = get_sub_field('author');
                 $content = get_sub_field('review');
               ?>
-          <div class="col-md-4 what-are-people-block">
-            <?php echo $content; ?>
-            <span class="author"><?php echo $name; ?></span>
-          </div><!-- what-are-people-block -->
-                        <?php endwhile; ?>
+                <div class="col-md-4 what-are-people-block">
+                  <?php echo $content; ?>
+                  <span class="author"><?php echo $name; ?></span>
+                </div><!-- what-are-people-block -->
+              <?php endwhile; ?>
             <?php endif; ?>
 
         </div><!-- /.row -->
@@ -125,7 +125,7 @@
         <div class="row">
           <h4 class="col-md-12">technical specifications</h4>
           <div class="technical-specifications-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <?php the_field('tech_content'); ?>
           </div><!-- /.technical-specifications-content -->
         </div><!-- row -->
       </div><!-- /.container -->
@@ -135,7 +135,7 @@
       <div class="container">
         <div class="row">
           <h3 class="col-md-12">
-            Find Out More About Stratospher Launch.<br><a href="#">#uspacetrip</a> community <a href="#"><i class="fa fa-facebook-official"></i></a> <a href="#"><i class="fa fa-youtube-square"></i></a> <a href="#"><i class="fa fa-instagram"></i></a>
+            Find Out More About Stratospher Launch.<br><a href="#">#uspacetrip</a> community <a href="<?php the_field('facebook'); ?>"><i class="fa fa-facebook-official"></i></a> <a href="#"><i class="fa fa-youtube-square"></i></a> <a href="#"><i class="fa fa-instagram"></i></a>
           </h3>
         </div><!-- row -->
       </div><!-- /.container -->
@@ -145,13 +145,7 @@
       <div class="container">
         <div class="row">
           <h4>Contact Us</h4>
-          <form action="">
-            <input type="text" name="name" placeholder="Your name">
-            <input type="text" name="mail" placeholder="E-mail">
-            <input type="text" name="phone" placeholder="Mobile">
-            <input type="text" name="messege" placeholder="Your message">
-            <input type="submit" value="Send messege">
-          </form>
+          <?php echo do_shortcode( '[contact-form-7 id="29" title="home-contact-form"]' ); ?>
         </div><!-- /.row -->
       </div><!-- /.container -->
     </article><!-- /#contact-us.contact-us -->
@@ -166,7 +160,7 @@
         <li>uspacetrip</li>
         <li><a href="mailto:hello@uspacetrip.com">hello@uspacetrip.com</a></li>
       </ul>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+      <p><?php the_field('footer_copy_text'); ?></p>
     </div><!-- /copyright -->
 
     <div class="paymathods">

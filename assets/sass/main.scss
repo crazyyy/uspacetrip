@@ -262,6 +262,7 @@ header {
   .social,
   .btn-head-order {
     position: absolute;
+    z-index: 5;
   }
   .logo {
     position: absolute;
@@ -303,34 +304,55 @@ header {
     right: 80px;
 
     width: 200px;
+    height: 40px;
+  }
+  nav {
+    ul {
+      padding: 50px 0 0;
+
+      text-align: right;
+
+      @extend .inner;
+      li {
+        display: inline-block;
+
+        margin: 0 19px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      a {
+        font-size: 18;
+
+        text-decoration: none;
+        text-transform: capitalize;
+
+        color: #fff;
+      }
+    }
   }
 }
-nav {
-  ul {
-    padding: 50px 0 0;
 
-    text-align: right;
+.header-menu-fixed {
+  height: 60px;
 
-    @extend .inner;
-    li {
-      display: inline-block;
-
-      margin: 0 19px;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
+  background-color: #121833;
+  .logo {
+    top: 10px;
+  }
+  .social {
+    top: 17px;
+  }
+  nav {
+    ul {
+      padding-top: 17px;
     }
-    a {
-      font-size: 18;
-
-      text-decoration: none;
-      text-transform: capitalize;
-
-      color: #fff;
-    }
+  }
+  .btn-head-order {
+    top: 10px;
   }
 }
 
