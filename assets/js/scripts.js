@@ -16,8 +16,6 @@
 }
 }());
 
-// Place any jQuery/helper plugins in here.
-
 // get browser width and height on window resize
 var headerEl = document.getElementById('header');
 // when window size changed - resize first block
@@ -1676,6 +1674,22 @@ $(document).ready(function(){
   $('.logo').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
+  });
+
+});
+
+// build bigform second page
+$(document).ready(function(){
+  //Click event to scroll to top
+  $('.btn-head-order').click(function(){
+    $('#header').addClass('order-form');
+    $('.owl-carousel').addClass('hidden-x');
+    $('#how-to-use-it').addClass('hidden-x');
+    $('#about').addClass('hidden-x');
+    $('#what-are-people-saying').addClass('hidden-x');
+    $('.find-uspacetrip').addClass('hidden-x');
+    $('#contact-us').addClass('contact-us-terms');
+    $('html, body').animate({scrollTop : 0},800);
   });
 
 });

@@ -142,12 +142,16 @@
     </article><!-- /.find-uspacetrip -->
 
     <article class="contact-us" id="contact-us">
-      <div class="container">
+      <div class="container container-contacts">
         <div class="row">
           <h4>Contact Us</h4>
           <?php echo do_shortcode( '[contact-form-7 id="29" title="home-contact-form"]' ); ?>
         </div><!-- /.row -->
-      </div><!-- /.container -->
+      </div><!-- /.container container-contacts -->
+      <div id="terms" class="container container-terms">
+        <h5><span>Terms & Conditions</span></h5>
+        <?php the_field('terms_content'); ?>
+      </div><!-- /.container container-terms -->
     </article><!-- /#contact-us.contact-us -->
 
   </section><!-- /section -->

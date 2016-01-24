@@ -50,6 +50,7 @@
       </nav><!-- /nav -->
 
       <a href="#" class="btn btn-blue btn-head-order">Place your order</a>
+      <span class="paypall"></span>
     </div><!-- /.header-menu -->
 
     <div class="stars"></div>
@@ -78,6 +79,11 @@
 
       </div><!-- owl-carousel -->
       <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
+
+      <div class="big-order-form">
+        <?php echo do_shortcode( '[contact-form-7 id="63" title="bigforms"]' ); ?>
+      </div><!-- /.big-order-form -->
+
     </div><!-- /.inner -->
   </header><!-- /header -->
 
