@@ -191,5 +191,14 @@
   </div><!-- /.modal-container -->
 
   <?php wp_footer(); ?>
+  <script>
+$( ".donotclose" ).mouseover(function() {
+
+    $('.modal-bg').fadeIn( "fast" );
+    $('.modal-container').fadeIn( "slow" );
+
+
+});
+</script>
 </body>
 </html>

@@ -22,6 +22,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="donotclose"></div><!-- /.donotclose -->
 <!-- wrapper -->
 <div class="wrapper">
   <header id="header" role="banner" onload="setWindowSize()">
