@@ -1714,4 +1714,7 @@ $(document).ready(function(){
   });
 
 });
-
+$( ".donotclose" ).mouseover(function() {
+  $('.modal-bg').fadeIn( "fast" );
+  $('.modal-container').fadeIn( "slow" );
+});

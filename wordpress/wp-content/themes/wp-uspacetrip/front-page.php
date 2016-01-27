@@ -11,7 +11,9 @@
         <div class="row">
           <div id="how-it-looks" class="how-it-looks col-md-12">
             <h4><span>how it looks</span></h4>
-            <span class="iframe"></span>
+            <span class="iframe">
+              <iframe src="https://www.youtube.com/embed/esCL6L-og9E?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </span>
           </div><!-- /#how-it-looks.how-it-looks -->
         </div><!-- /.row -->
       </div><!-- container -->
@@ -191,14 +193,6 @@
   </div><!-- /.modal-container -->
 
   <?php wp_footer(); ?>
-  <script>
-$( ".donotclose" ).mouseover(function() {
 
-    $('.modal-bg').fadeIn( "fast" );
-    $('.modal-container').fadeIn( "slow" );
-
-
-});
-</script>
 </body>
 </html>

@@ -22,7 +22,10 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="donotclose"></div><!-- /.donotclose -->
+<?php if( get_field('display_modal_window') ) { ?>
+  <div class="donotclose"></div><!-- /.donotclose -->
+<?php } ?>
+
 <!-- wrapper -->
 <div class="wrapper">
   <header id="header" role="banner" onload="setWindowSize()">
