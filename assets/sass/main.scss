@@ -191,6 +191,7 @@ background-repeat: no-repeat;
 background-position: center bottom; */
     .item {
       position: relative;
+
       padding-top: 300px;
       /*
       height: 756px; */
@@ -1166,6 +1167,14 @@ footer {
 @media (max-width: 1250px) {
   .inner {
     width: 100%;
+  }
+  .modal-container {
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
