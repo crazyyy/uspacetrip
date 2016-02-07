@@ -65,26 +65,12 @@
 
     <div class="inner">
       <div class="owl-carousel">
-
-        <?php if( have_rows('slider') ): ?>
-          <?php while( have_rows('slider') ): the_row();
-            // vars
-            $title = get_sub_field('slide_title');
-            $content = get_sub_field('slide_content');
-            $image = get_sub_field('slide_image');
-          ?>
-            <div class="item">
-              <h6><?php echo $title; ?></h6>
-              <p><?php echo $content; ?></p>
-              <span class="container-img">
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-              </span>
-            </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
-
+        <div class="item">
+          <h6>We know how to <span>get high</span></h6>
+          <p>We launch dreams into stratosphere and<br>create beautiful videos to memorise this moment</p>
+        </div>
       </div><!-- owl-carousel -->
-      <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
+      <a href="#" class="btn btn-white btn-head-recall">Place your order</a>
 
       <div class="big-order-form">
         <?php echo do_shortcode( '[contact-form-7 id="63" title="bigforms"]' ); ?>

@@ -186,13 +186,14 @@ header {
     text-align: center;
 
     color: #fff;
-    background-image: url(../img/bg/platform.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    /*     background-image: url(../img/bg/platform.png);
+background-repeat: no-repeat;
+background-position: center bottom; */
     .item {
       position: relative;
-
-      height: 756px;
+      padding-top: 300px;
+      /*
+      height: 756px; */
     }
     h6 {
       font-family: 'Bebas';
@@ -217,6 +218,7 @@ header {
       display: block;
 
       margin: 0;
+      margin-bottom: 50px;
       padding: 0 320px;
 
       text-align: center;;
