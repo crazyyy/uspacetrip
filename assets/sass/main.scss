@@ -1,6 +1,12 @@
 @import 'import/reset';
 @import 'import/variables';
 @import 'import/buttons';
+
+.inner {
+  position: relative;
+
+  padding-top: 300px;
+}
 @import 'import/forms';
 @import 'import/lists';
 @import 'import/tables';
@@ -13,9 +19,9 @@
 @import 'fonts/font_bebas';
 @import 'fonts/font_helveticaneue';
 @import 'fonts/font_proxima-nova';
-@import 'owl/owl.carousel';
+/* @import 'owl/owl.carousel';
 @import 'owl/owl.theme';
-@import 'owl/owl.transitions';
+@import 'owl/owl.transitions'; */
 @import 'jq.youtube.bg';
 /* @import 'space'; */
 html,
@@ -186,16 +192,6 @@ header {
     text-align: center;
 
     color: #fff;
-    /*     background-image: url(../img/bg/platform.png);
-background-repeat: no-repeat;
-background-position: center bottom; */
-    .item {
-      position: relative;
-
-      padding-top: 300px;
-      /*
-      height: 756px; */
-    }
     h6 {
       font-family: 'Bebas';
       font-size: 120px;
@@ -210,6 +206,9 @@ background-position: center bottom; */
       span {
         color: $blue;
       }
+    }
+    .order-page {
+      display: none;
     }
     p {
       font-family: $hcl;
@@ -499,8 +498,14 @@ background-position: center bottom; */
 }
 
 .order-form {
-  #header {
-    height: 2350px !important;
+  /*   padding-top: 200px; */
+ height: 2350px !important;
+  .owl-carousel {
+    margin-top: -120px;
+    padding-top: 0 !important;
+  }
+  .main-page {
+    display: block;
   }
   .btn-head-order,
   .btn-head-recall {
@@ -511,6 +516,41 @@ background-position: center bottom; */
   }
   .big-order-form {
     display: block;
+  }
+  form {
+    width: 560px;
+    margin: 0 auto;
+
+    text-align: center;
+    input {
+      margin-bottom: 30px;
+      padding: 18px;
+
+      text-align: center;
+
+      color: $blue;
+      border: 0;
+      border-bottom: 1px solid $blue;
+      outline: none;
+      background-color: transparent;
+      box-shadow: none;
+      &:focus {
+        box-shadow: none;
+      }
+      &[type=submit] {
+        width: 240px;
+        height: 60px;
+        margin: 0 auto;
+
+        border: 1px solid $blue;
+      }
+    }
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder,
+    input:-moz-placeholder,
+    input:-ms-input-placeholder {
+      color: $blue;
+    }
   }
 }
 
