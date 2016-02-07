@@ -15,5 +15,13 @@
 
   <?php wp_footer(); ?>
 
+<script>
+  $('#header').YTPlayer({
+    fitToBackground: true,
+    videoId: 'LSmgKRx5pBo'
+  });
+</script>
+
+
 </body>
 </html>

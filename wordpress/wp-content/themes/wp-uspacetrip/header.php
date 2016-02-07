@@ -51,6 +51,8 @@
 
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times"></i>
       </nav><!-- /nav -->
 
       <a href="#" class="btn btn-blue btn-head-order">Place your order</a>
