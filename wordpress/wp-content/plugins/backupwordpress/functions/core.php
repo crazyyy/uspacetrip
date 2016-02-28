@@ -107,9 +107,27 @@ function update() {
 		}
 
 		// Set the archive filename to what it used to be
-		$legacy_schedule->backup->set_archive_filename( implode( '-', array( get_bloginfo( 'name' ), 'backup', current_time( 'Y-m-d-H-i-s' ) ) ) . '.zip' );
+		$legacy_schedule->backup_filename = implode( '-', array( get_bloginfo( 'name' ), 'backup', current_time( 'Y-m-d-H-i-s' ) ) ) . '.zip';
 
 		$legacy_schedule->save();
+
+		$legacy_path = get_option( 'hmbkp_path' );
+
+		if ( $legacy_path ) {
+
+			// Prepend 'backup-' to the beginning of any legacy backups so they are picked up by the legacy schedule
+			if ( $handle = opendir( $legacy_path ) ) {
+				while ( false !== ( $file = readdir( $handle ) ) ) {
+					if ( 'zip' === pathinfo( $file, PATHINFO_EXTENSION ) ) {
+						rename( trailingslashit( $legacy_path ) . $file, trailingslashit( $legacy_path ) . 'backup-' . $file );
+					}
+				}
+				closedir( $handle );
+			}
+
+			PATH::get_instance()->move_old_backups( $legacy_path );
+
+		}
 
 		// Remove the legacy options
 		foreach ( array( 'hmbkp_database_only', 'hmbkp_files_only', 'hmbkp_max_backups', 'hmbkp_email_address', 'hmbkp_email', 'hmbkp_schedule_frequency', 'hmbkp_disable_automatic_backup' ) as $option_name ) {
@@ -266,7 +284,9 @@ function update() {
 	// Every update
 	if ( get_option( 'hmbkp_plugin_version' ) && version_compare( Plugin::PLUGIN_VERSION, get_option( 'hmbkp_plugin_version' ), '>' ) ) {
 
-		Setup::deactivate();
+		require_once( HMBKP_PLUGIN_PATH . 'classes/class-setup.php' );
+		
+		\HMBKP_Setup::deactivate();
 
 		Path::get_instance()->protect_path( 'reset' );
 
@@ -320,7 +340,7 @@ function setup_default_schedules() {
 
 }
 
-add_action( 'admin_init', '\HM\BackUpWordPress\setup_default_schedules' );
+add_action( 'admin_init', '\HM\BackUpWordPress\setup_default_schedules', 11 );
 
 /**
  * Return an array of cron schedules

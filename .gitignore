@@ -3,6 +3,7 @@ thumbs.db
 *.sublime-project
 *.sublime-workspace
 .sass-cache
+.phpintel
 .sublime-gulp.cache
 /.hg
 _gsdata_
