@@ -31,7 +31,6 @@
   <header id="header" role="banner" onload="setWindowSize()">
 
     <div class="header-menu">
-
       <div class="logo">
         <?php if ( is_front_page() && is_home() ){ } else { ?>
           <a href="<?php echo home_url(); ?>">
@@ -74,7 +73,7 @@
       </div><!-- owl-carousel -->
       <a href="#" class="btn btn-white btn-head-recall">Place your order</a>
 
-      <div class="big-order-form">
+      <div class="big-order-form" id="big-order-form">
         <?php echo do_shortcode( '[contact-form-7 id="63" title="bigforms"]' ); ?>
       </div><!-- /.big-order-form -->
 

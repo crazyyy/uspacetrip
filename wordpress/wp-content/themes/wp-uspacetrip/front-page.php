@@ -195,30 +195,5 @@
 
   <?php wp_footer(); ?>
 
-<!--   <script>
-    // // http://rochestb.github.io/jQuery.YoutubeBackground/
-    $('#header').YTPlayer({
-      fitToBackground: true,
-      videoId: 'hd0cEC7WB98',
-      playerVars: {
-        modestbranding: 0,
-        autoplay: 1,
-        controls: 0,
-        showinfo: 0,
-        branding: 0,
-        rel: 0,
-        autohide: 0,
-        start: 59
-      }
-    });
-  </script> -->
-
-  <script>
-    $('.nav .fa').click(function(){
-      $(this).parent().toggleClass('nav-mobile');
-    });
-
-  </script>
-
 </body>
 </html>

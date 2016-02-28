@@ -1671,10 +1671,10 @@ $(document).ready(function(){
   });
 
   //Click event to scroll to top
-  $('.logo').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-  });
+  // $('.logo').click(function(){
+  //   $('html, body').animate({scrollTop : 0},800);
+  //   return false;
+  // });
 
 });
 
@@ -1688,10 +1688,26 @@ $(document).ready(function(){
     $('#about').addClass('hidden-x');
     $('#what-are-people-saying').addClass('hidden-x');
     $('.find-uspacetrip').addClass('hidden-x');
+    $('.loaded .ytplayer-container').addClass('hidden-x');
+    $('.loaded .ytplayer-container').css({
+      display: 'none'
+    });
     $('#contact-us').addClass('contact-us-terms');
     $('html, body').animate({scrollTop : 0},800);
+    // $('.logo').addClass('close-order-form');
   });
-
+  $('.close-order-form a').click(function(event){
+    event.preventDefault();
+    $('#header').removeClass('order-form');
+    $('#how-to-use-it').removeClass('hidden-x');
+    $('#about').removeClass('hidden-x');
+    $('#what-are-people-saying').removeClass('hidden-x');
+    $('.find-uspacetrip').removeClass('hidden-x');
+    $('#contact-us').removeClass('contact-us-terms');
+    $('html, body').animate({scrollTop : 0},800);
+    $('.logo').removeClass('logo-go-home');
+    alert('close');
+  });
 });
 
 // modal window
@@ -1715,10 +1731,10 @@ $(document).ready(function(){
 
 });
 // modal window on close windows
-// $( ".donotclose" ).mouseover(function() {
-//   $('.modal-bg').fadeIn( "fast" );
-//   $('.modal-container').fadeIn( "slow" );
-// });
+$( ".donotclose" ).mouseover(function() {
+  $('.modal-bg').fadeIn( "fast" );
+  $('.modal-container').fadeIn( "slow" );
+});
 /*
  * YoutubeBackground - A wrapper for the Youtube API - Great for fullscreen background videos or just regular videos.
  *
@@ -2050,3 +2066,28 @@ if (typeof Object.create !== "function") {
 })(jQuery, window, document);
 
 
+// // http://rochestb.github.io/jQuery.YoutubeBackground/
+$('#header').YTPlayer({
+  fitToBackground: true,
+  videoId: 'hd0cEC7WB98',
+  // HD video to test on bottom
+  // videoId: 'SJKNyZgH4Xo',
+  // ratio: 'auto',
+  optimizeDisplay: true,
+  loop: true,
+  // realfullscreen: true,
+  showYTLogo: false,
+  playerVars: {
+    modestbranding: 0,
+    autoplay: 1,
+    controls: 0,
+    showinfo: 0,
+    branding: 0,
+    rel: 0,
+    autohide: 0,
+    start: 59
+  }
+});
+$('.nav .fa').click(function(){
+  $(this).parent().toggleClass('nav-mobile');
+});

@@ -21,10 +21,11 @@
 html,
 body {
   width: 100%;
+  min-width: 640px;
   height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 640px;
+
   animation: fadein 0s;
 }
 body {
@@ -35,7 +36,6 @@ body {
 
   width: auto !important;
   width: 100%;
-
 
   color: $base-font-color;
   background-color: $base-background-color;
@@ -95,8 +95,9 @@ input {
 }
 .wrapper {
   position: relative;
-min-width: 640px;
+
   width: 100%;
+  min-width: 640px;
   height: auto !important;
   height: 100%;
   min-height: 100%;
@@ -319,7 +320,8 @@ header {
   top: 0;
   right: 0;
   left: 0;
-min-width: 640px;
+
+  min-width: 640px;
   height: 100px;
   .logo,
   .social,
@@ -336,6 +338,8 @@ min-width: 640px;
 
     width: 120px;
     img {
+      display: block !important;
+
       max-width: 100%;
     }
   }
@@ -412,6 +416,12 @@ min-width: 640px;
         }
         &:last-child {
           margin-right: 0;
+        }
+        &.menu-item-66,
+        &.menu-item-66,
+        &.menu-item-76,
+        &.menu-item-77 {
+          display: none;
         }
       }
       a {
@@ -508,8 +518,17 @@ min-width: 640px;
           &.menu-item-38 {
             display: none;
           }
+          &.menu-item-66,
+          &.menu-item-67,
+          &.menu-item-76,
+          &.menu-item-77 {
+            display: inline-block;
+          }
         }
       }
+    }
+    .paypall {
+      width: 150px;
     }
   }
   .owl-carousel {
@@ -1186,6 +1205,11 @@ footer {
     }
   }
 }
+
+.ytplayer-player {
+  left: 0 !important;
+}
+
 .hidden-x {
   display: none !important;
 }
@@ -1358,6 +1382,13 @@ footer {
       }
     }
   }
+  .order-form {
+    .header-menu {
+      nav {
+        right: 250px;
+      }
+    }
+  }
 }
 @media (max-width: 990px) {
   header {
@@ -1365,6 +1396,11 @@ footer {
       p {
         padding: 0 50px;
       }
+    }
+  }
+  .contact-us {
+    &.contact-us-terms {
+      height: 1410px;
     }
   }
 }
@@ -1384,8 +1420,8 @@ footer {
       }
     }
     .row {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
     }
   }
   .what-are-people-saying {
@@ -1398,6 +1434,11 @@ footer {
 @media (max-width: 750px) {
   .find-uspacetrip {
     padding-top: 100px;
+  }
+  .contact-us {
+    &.contact-us-terms {
+      height: 1520px;
+    }
   }
 }
 @media (max-width: 670px) {
@@ -1425,6 +1466,11 @@ footer {
         width: 100px;
         height: 100px;
       }
+    }
+  }
+  .contact-us {
+    &.contact-us-terms {
+      height: 1650px;
     }
   }
 }
