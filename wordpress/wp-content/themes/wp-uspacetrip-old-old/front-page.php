@@ -95,7 +95,7 @@
 
           </ul>
           <h6>Do you have any questions?</h6>
-          <a href="" class="btn btn-white btn-place-order">Contact Us</a>
+          <a href="" class="btn btn-white btn-place-order">Place your order</a>
         </div><!-- row -->
       </div><!-- /.container -->
     </article><!-- /#how-we-do-it.how-we-do-it -->
@@ -161,7 +161,6 @@
 
 <footer role="contentinfo">
   <div class="inner">
-
     <div class="copyright">
       <ul>
         <li>uspacetrip</li>
@@ -194,31 +193,6 @@
   </div><!-- /.modal-container -->
 
   <?php wp_footer(); ?>
-
-  <script>
-    // // http://rochestb.github.io/jQuery.YoutubeBackground/
-    $('#header').YTPlayer({
-      fitToBackground: true,
-      videoId: 'hd0cEC7WB98',
-      playerVars: {
-        modestbranding: 0,
-        autoplay: 1,
-        controls: 0,
-        showinfo: 0,
-        branding: 0,
-        rel: 0,
-        autohide: 0,
-        start: 59
-      }
-    });
-  </script>
-
-  <script>
-    $('.nav .fa').click(function(){
-      $(this).parent().toggleClass('nav-mobile');
-    });
-
-  </script>
 
 </body>
 </html>

@@ -51,8 +51,6 @@
 
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
-        <i class="fa fa-bars"></i>
-        <i class="fa fa-times"></i>
       </nav><!-- /nav -->
 
       <a href="#" class="btn btn-blue btn-head-order">Place your order</a>
@@ -65,14 +63,26 @@
 
     <div class="inner">
       <div class="owl-carousel">
-        <div class="item">
-          <h6 class="main-page">We know how to <span>get high</span></h6>
-          <h6 class="order-page">place <span>your order</span></h6>
-          <p>We launch dreams into stratosphere and<br>create beautiful videos to memorise this moment</p>
-          <h5 class="order-page-prices">$750 Only. for sucsesful flight!</h5>
-        </div>
+
+        <?php if( have_rows('slider') ): ?>
+          <?php while( have_rows('slider') ): the_row();
+            // vars
+            $title = get_sub_field('slide_title');
+            $content = get_sub_field('slide_content');
+            $image = get_sub_field('slide_image');
+          ?>
+            <div class="item">
+              <h6><?php echo $title; ?></h6>
+              <p><?php echo $content; ?></p>
+              <span class="container-img">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+              </span>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
+
       </div><!-- owl-carousel -->
-      <a href="#" class="btn btn-white btn-head-recall">Place your order</a>
+      <a href="#" class="btn btn-white btn-head-recall">Сall back</a>
 
       <div class="big-order-form">
         <?php echo do_shortcode( '[contact-form-7 id="63" title="bigforms"]' ); ?>

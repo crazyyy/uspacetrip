@@ -1,12 +1,6 @@
 @import 'import/reset';
 @import 'import/variables';
 @import 'import/buttons';
-
-.inner {
-  position: relative;
-
-  padding-top: 300px;
-}
 @import 'import/forms';
 @import 'import/lists';
 @import 'import/tables';
@@ -26,7 +20,7 @@
 /* @import 'space'; */
 html,
 body {
-  min-width: $width;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -186,8 +180,8 @@ header {
     height: 100%;
   }
   .owl-carousel {
-    /* padding-top: 207px; */
-    padding-top: 110px;
+    padding-top: 250px;
+    /* padding-top: 110px; */
 
     text-align: center;
 
@@ -207,6 +201,7 @@ header {
         color: $blue;
       }
     }
+    .order-page-prices,
     .order-page {
       display: none;
     }
@@ -499,13 +494,41 @@ header {
 
 .order-form {
   /*   padding-top: 200px; */
- height: 2350px !important;
-  .owl-carousel {
-    margin-top: -120px;
-    padding-top: 0 !important;
+  height: 2650px !important;
+  .header-menu {
+    nav {
+      ul {
+        li {
+          &.menu-item-32,
+          &.menu-item-33,
+          &.menu-item-34,
+          &.menu-item-36,
+          &.menu-item-38 {
+            display: none;
+          }
+        }
+      }
+    }
   }
-  .main-page {
-    display: block;
+  .owl-carousel {
+    /*     margin-top: -120px;
+padding-top: 0 !important; */
+    .main-page {
+      display: none;
+    }
+    .order-page-prices,
+    .order-page {
+      display: block;
+    }
+  }
+  .order-page-prices {
+    font-size: 60px;
+    font-weight: bold;
+
+    margin-bottom: 60px;
+
+    text-align: center;
+    text-transform: uppercase;
   }
   .btn-head-order,
   .btn-head-recall {
@@ -550,6 +573,45 @@ header {
     input:-moz-placeholder,
     input:-ms-input-placeholder {
       color: $blue;
+    }
+    select {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 18px;
+
+      text-align: center;
+
+      color: $blue;
+      border: 0;
+      border-bottom: 1px solid $blue;
+      background-color: transparent;
+    }
+    option {
+      width: 100%;
+
+      text-align: center;
+
+      background-color: transparent;
+    }
+    label {
+      font-size: 18px;
+
+      display: block;
+
+      margin-bottom: 18px;
+
+      text-align: center;
+
+      color: #29c1ff;
+    }
+    textarea {
+      height: 160px;
+      margin-bottom: 18px;
+
+      color: $blue;
+      border: 0;
+      border-bottom: 1px solid $blue;
+      background-color: transparent;
     }
   }
 }
@@ -994,6 +1056,8 @@ article {
     font-weight: bold;
 
     margin-bottom: 55px;
+    padding-right: 40px;
+    padding-left: 40px;
 
     text-transform: uppercase;
 
@@ -1079,6 +1143,7 @@ footer {
     font-size: 14px;
 
     width: 220px;
+    margin: 0 auto;
     margin: 0 auto;
     padding: 100px 0 0;
 
@@ -1216,6 +1281,23 @@ footer {
     margin-right: auto;
     margin-left: auto;
   }
+  section {
+    padding-bottom: 550px;
+  }
+  footer {
+    height: 550px;
+    margin-top: -550px;
+    .copyright,
+    .paymathods,
+    .maillist {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+
+      margin: 0 auto 50px;
+    }
+  }
 }
 
 
@@ -1247,6 +1329,71 @@ footer {
       top: 10px;
     }
   }
+  .how-to-use-it {
+    .tabs-header {
+      .col-md-2,
+      .col-md-3 {
+        display: block;
+
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 15px !important;
+      }
+    }
+    .tabContent {
+      img {
+        width: 40%;
+        height: auto;
+        margin-right: 20px;
+      }
+      h5 {
+        padding-top: 20px;
+      }
+      .btn-blue {
+        display: block;
+
+        margin: 0 auto 20px;
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  header {
+    .owl-carousel {
+      p {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .how-to-use-it {
+    .tabs-header {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .how-to-use-it {
+    .tabContent {
+      p {
+        /*         margin-bottom: 30px; */
+        padding-right: 10px;
+      }
+    }
+  }
+  .what-are-people-saying {
+    .what-are-people-block {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .find-uspacetrip {
+    padding-top: 100px;
+  }
 }
 @media (max-width: 670px) {
   .header-menu {
@@ -1255,6 +1402,24 @@ footer {
     }
     .social {
       left: 180px;
+    }
+  }
+  .how-to-use-it {
+    .tabContent {
+      h5 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .how-we-do-it {
+    ul {
+      li {
+        padding-left: 140px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }
