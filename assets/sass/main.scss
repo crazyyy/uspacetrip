@@ -24,7 +24,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-
+  min-width: 640px;
   animation: fadein 0s;
 }
 body {
@@ -33,7 +33,9 @@ body {
   font-weight: $f-norm;
   line-height: $base-line-height;
 
-  min-width: 420px;
+  width: auto !important;
+  width: 100%;
+
 
   color: $base-font-color;
   background-color: $base-background-color;
@@ -93,7 +95,7 @@ input {
 }
 .wrapper {
   position: relative;
-
+min-width: 640px;
   width: 100%;
   height: auto !important;
   height: 100%;
@@ -317,7 +319,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-
+min-width: 640px;
   height: 100px;
   .logo,
   .social,
@@ -1373,14 +1375,17 @@ footer {
       padding-left: 15px;
     }
   }
-}
-@media (max-width: 800px) {
+
   .how-to-use-it {
     .tabContent {
       p {
         /*         margin-bottom: 30px; */
         padding-right: 10px;
       }
+    }
+    .row {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   .what-are-people-saying {
@@ -1423,7 +1428,15 @@ footer {
     }
   }
 }
-
+@media (max-width: 700px) {
+  header {
+    .owl-carousel {
+      h6 {
+        font-size: 110px;
+      }
+    }
+  }
+}
 @media (max-width: 550px) {
   .header-menu {
     .social {

@@ -195,7 +195,7 @@
 
   <?php wp_footer(); ?>
 
-  <script>
+<!--   <script>
     // // http://rochestb.github.io/jQuery.YoutubeBackground/
     $('#header').YTPlayer({
       fitToBackground: true,
@@ -211,7 +211,7 @@
         start: 59
       }
     });
-  </script>
+  </script> -->
 
   <script>
     $('.nav .fa').click(function(){
