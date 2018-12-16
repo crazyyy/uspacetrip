@@ -2065,29 +2065,69 @@ if (typeof Object.create !== "function") {
 
 })(jQuery, window, document);
 
-
-// // http://rochestb.github.io/jQuery.YoutubeBackground/
-$('#header').YTPlayer({
-  fitToBackground: true,
-  videoId: 'hd0cEC7WB98',
-  // HD video to test on bottom
-  // videoId: 'SJKNyZgH4Xo',
-  // ratio: 'auto',
-  optimizeDisplay: true,
-  loop: true,
-  // realfullscreen: true,
-  showYTLogo: false,
-  playerVars: {
-    modestbranding: 0,
-    autoplay: 1,
-    controls: 0,
-    showinfo: 0,
-    branding: 0,
-    rel: 0,
-    autohide: 0,
-    start: 59
-  }
-});
 $('.nav .fa').click(function(){
   $(this).parent().toggleClass('nav-mobile');
 });
+
+
+
+
+
+  // jQuery(document).ready(function($) {
+  //   var headerHeight = $('header').height();
+  //   $('.ytplayer-container').height(headerHeight)
+  //   $('.ytplayer-container iframe').height(headerHeight)
+  // });
+
+if (typeof (window.innerWidth) == 'number') {
+  myWidth = window.innerWidth;
+  myHeight = window.innerHeight;
+} else {
+  if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else {
+    if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+      myWidth = document.body.clientWidth;
+      myHeight = document.body.clientHeight;
+    }
+  }
+}
+
+if ( myWidth > 720 ) {
+  // // http://rochestb.github.io/jQuery.YoutubeBackground/
+  $('.yt-bigger').YTPlayer({
+    ratio: 16/9,
+    quality: 'highres',
+    // containment: 'header',
+    videoId: 'LSmgKRx5pBo',
+    optimizeDisplay: true,
+    loop: true,
+    vol: 0,
+    autoPlay: true,
+    showYTLogo: false,
+    showControls: false,
+
+
+    // fitToBackground: true,
+    videoId: 'hd0cEC7WB98',
+    // HD video to test on bottom
+    // videoId: 'SJKNyZgH4Xo',
+    // ratio: 'auto',
+
+
+    realfullscreen: true,
+
+    // playerVars: {
+    //   modestbranding: 0,
+    //   autoplay: 1,
+    //   controls: 0,
+    //   showinfo: 0,
+    //   branding: 0,
+    //   rel: 0,
+    //   autohide: 0,
+    //   start: 59
+    // }
+  });
+
+}

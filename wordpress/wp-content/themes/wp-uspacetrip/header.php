@@ -59,6 +59,9 @@
     <div class="earth"></div>
     <div class="twinkling"></div>
 
+    <div class="yt-bigger"></div>
+     <!-- /.yt-bigger -->
+
     <div class="inner">
       <div class="owl-carousel">
         <div class="item">
